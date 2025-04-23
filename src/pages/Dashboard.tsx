@@ -147,12 +147,12 @@ const Dashboard = () => {
       {
         label: 'Air Quality Cases',
         data: Object.values(mockData.locations).map(loc => loc.air),
-        backgroundColor: '#FFCE56',
+        backgroundColor: '#4BC0C0',
       },
       {
         label: 'Smokers',
         data: Object.values(mockData.locations).map(loc => loc.smokers),
-        backgroundColor: '#4BC0C0',
+        backgroundColor: '#FFCE56',
       }
     ]
   };
@@ -162,7 +162,7 @@ const Dashboard = () => {
     datasets: Object.entries(mockData.locations).map(([location, data], index) => ({
       label: location,
       data: data.monthlyTrend,
-      borderColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'][index],
+      borderColor: ['#FF6384', '#36A2EB', '#4BC0C0', '#FFCE56'][index],
       fill: false
     }))
   };
@@ -220,7 +220,7 @@ const Dashboard = () => {
         </div>
 
         <div className="bg-white p-6 rounded-lg shadow">
-          <h2 className="text-lg font-semibold mb-4">Monthly COPD Trends</h2>
+          <h2 className="text-lg font-semibold mb-4">Monthly COPD Trends for Dawa Industrial</h2>
           <div className="h-[300px]">
             <Line 
               data={trendData} 
