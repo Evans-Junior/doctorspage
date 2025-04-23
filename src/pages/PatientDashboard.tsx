@@ -505,7 +505,7 @@ const sendMessageToPatient = async (patientId: string, message: string) => {
         <div className="space-x-4">
           <button
             onClick={() => setShowPrescriptionForm(true)}
-            className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+            className="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600"
           >
             <PlusCircle className="inline-block mr-2" size={20} />
             New Prescription
