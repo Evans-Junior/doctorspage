@@ -8,6 +8,7 @@ import Layout from './components/Layout';
 import Dashboard from './pages/Dashboard';
 import PatientList from './pages/PatientList';
 import PatientDashboard from './pages/PatientDashboard';
+import Prescriptions from './pages/Prescriptions';
 
 const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
   const { isAuthenticated, loading } = useAuthStore();
@@ -40,6 +41,8 @@ function App() {
           <Route index element={<Dashboard />} />
           <Route path="patients" element={<PatientList />} />
           <Route path="patients/:id" element={<PatientDashboard />} />
+          <Route path="prescriptions" element={<Prescriptions />} />
+
         </Route>
       </Routes>
     </Router>

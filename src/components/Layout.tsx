@@ -8,6 +8,7 @@ import {
   Home,
   Users,
   Bell,
+  FileText,
   LogOut,
 } from 'lucide-react';
 import Notifications from './Notifications';
@@ -54,20 +55,28 @@ function Layout() {
             </div>
           </div>
           <nav className="flex-1 p-4">
-            <Link
+          <Link
               to="/"
-              className="flex items-center space-x-2 p-2 hover:bg-gray-100 rounded"
+              className="flex items-center space-x-2 p-2 hover:bg-gray-100 rounded "
             >
               <Home size={20} />
               <span>Dashboard</span>
             </Link>
             <Link
               to="/patients"
-              className="flex items-center space-x-2 p-2 hover:bg-gray-100 rounded"
+              className="flex items-center space-x-2 p-2 hover:bg-gray-100 rounded "
             >
               <Users size={20} />
               <span>Patients</span>
             </Link>
+            <Link
+              to="/prescriptions"
+              className="flex items-center space-x-2 p-2 hover:bg-gray-100 rounded "
+            >
+              <FileText size={20} />
+              <span>Prescriptions</span>
+            </Link>
+            
           </nav>
           <div className="p-4 border-t">
             <button

@@ -25,12 +25,6 @@ export interface Patient {
 }
 
 export interface Doctor {
-  location: null;
-  experience: null;
-  description: null;
-  reviews: never[];
-  rating: null;
-  country: null;
   id: string;
   name: string;
   email: string;
@@ -46,4 +40,17 @@ export interface Notification {
   status: 'pending' | 'accepted' | 'rejected';
   timestamp: string;
   message: string;
+}
+
+export interface Prescription {
+  id: string;
+  patientId: string;
+  patientName: string;
+  medication: string;
+  category: 'COPD' | 'Smokers' | 'Control' | 'Air';
+  instructions: string;
+  doctorId: string;
+  doctorName: string;
+  createdAt: Date;
+  status: 'active' | 'completed';
 }
