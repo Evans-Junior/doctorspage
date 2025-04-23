@@ -10,8 +10,8 @@ const mockData = {
     'Dawa Industrial': 25,
     'Tema Free Trade': 18,
     'Manet Junction': 15,
-    'South ind': 12,
-    'Kingsway (Near COCOBOD)': 10
+    'South ind': 22,
+    // 'Kingsway (Near COCOBOD)': 10
   },
   totalPatients: 80,
   copdPositive: 45
@@ -41,6 +41,7 @@ const Dashboard = () => {
   const locationData = {
     labels: Object.keys(mockData.locations),
     datasets: [{
+      label: 'COPD',
       data: Object.values(mockData.locations),
       backgroundColor: [
         '#FF6384',
@@ -51,6 +52,7 @@ const Dashboard = () => {
       ]
     }]
   };
+  
 
   const copdStatusData = {
     labels: ['COPD Positive', 'COPD Negative'],
