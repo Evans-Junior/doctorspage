@@ -87,7 +87,7 @@ const PatientDashboard = () => {
 
   // Initialize Vertex AI
   const vertexAI = getVertexAI();
-  const generativeModel = getGenerativeModel(vertexAI, { model: "gemini-1.5-flash" });
+  const generativeModel = getGenerativeModel(vertexAI, { model: "gemini-2.0-flash" });
 
 
 
@@ -510,13 +510,6 @@ const sendMessageToPatient = async (patientId: string, message: string) => {
             <PlusCircle className="inline-block mr-2" size={20} />
             New Prescription
           </button>
-          {/* <button
-            onClick={() => setShowSensorForm(true)}
-            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-          >
-            <FileText className="inline-block mr-2" size={20} />
-            Add Sensor Data
-          </button> */}
         </div>
       </div>
 
